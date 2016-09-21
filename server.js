@@ -86,7 +86,7 @@ app.get('/*', function(req, res) {
     
    // var size = db.collection('urls').find().length;
    // console.log(size)
-    if(input.slice(0,11)==="http://www."&&input.slice(-4)==='.com'){
+    if(input.slice(0,23)==="http://www."&&input.slice(-4)==='.com'){
        URL.findOne({url: input}, function(err, link) {
  // console.log(document.name);
    if(!link){

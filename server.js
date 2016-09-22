@@ -76,8 +76,11 @@ var tiny=URL.count({}, function(err, c) {
 app.get('/*', function(req, res) {
 
   var ans="na";
-  var input = req.path.substr(1);
+  var input = req.path;
   console.log(input)
+  if(input===""){
+   res.send("please enter a url")
+  }
 
   
 
@@ -86,7 +89,7 @@ app.get('/*', function(req, res) {
     
    // var size = db.collection('urls').find().length;
    // console.log(size)
-    if(input.slice(0,23)==="http://www."&&input.slice(-4)==='.com'){
+   else if(input.slice(0,23)==="http://www."&&input.slice(-4)==='.com'){
        URL.findOne({url: input}, function(err, link) {
  // console.log(document.name);
    if(!link){

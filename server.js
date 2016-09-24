@@ -52,7 +52,7 @@ app.use(bodyParser());
 // routes will go here
 
 // start the server
-app.listen('3000',function(){
+app.listen(process.env.PORT || 3000,function(){
   console.log("this is working")
 })
   var db=mongoose.connect(url, function (err, db) {

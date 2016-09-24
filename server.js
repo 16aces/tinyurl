@@ -80,7 +80,7 @@ var tiny=URL.count({}, function(err, c) {
 app.get('/*', function(req, res) {
 
   var ans="na";
-  var input = req.path;
+  var input = req.path.substr(1);
   console.log(input)
   if(input===""){
    res.send("please enter a url")

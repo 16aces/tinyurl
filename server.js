@@ -83,7 +83,7 @@ app.get('/*', function(req, res) {
   var input = req.path.substr(1);
   console.log(input)
   if(input===""){
-   res.send("please enter a url")
+   res.send('Enter a url int the "http://www." ".com" format after the url to have it shortened or enter the shortened url after the url to be redirected. ')
   }
 
   

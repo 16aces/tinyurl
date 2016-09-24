@@ -73,9 +73,10 @@ var tiny=URL.count({}, function(err, c) {
 //app.use(bodyParser.urlencoded({ extended: false }))
 //app.use(bodyParser.json())
  //var URL = mongoose.model('User', {url: String,  tiny: Number});
+ /*
  app.get('/favicon.ico', function(req, res) {
     res.send(200);
-})
+})*/
 app.get('/*', function(req, res) {
 
   var ans="na";
